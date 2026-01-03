@@ -1,0 +1,272 @@
+.dish-card {
+  position: relative;
+  display: flex;
+  background: #0f2a0f;
+  border: 2px solid #1a3a1a;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.dish-card:hover {
+  border-color: #2a4a2a;
+}
+
+.dish-card.selected {
+  border-color: #4ade80;
+  box-shadow: 0 0 0 1px #4ade80;
+}
+
+.selected-badge {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: rgba(15, 42, 15, 0.9);
+  border: 1px solid #4ade80;
+  border-radius: 20px;
+  color: #4ade80;
+  font-size: 12px;
+  font-weight: 600;
+  z-index: 1;
+}
+
+.dish-image-container {
+  position: relative;
+  flex-shrink: 0;
+  width: 180px;
+  height: 200px;
+  padding: 16px;
+}
+
+.dish-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.dish-type-indicator {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  font-size: 12px;
+}
+
+.dish-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 20px 20px 20px 0;
+}
+
+.dish-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 8px 0;
+}
+
+.dish-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.dish-price {
+  font-size: 18px;
+  font-weight: 700;
+  color: #4ade80;
+}
+
+.dish-calories {
+  font-size: 14px;
+  color: #9ca3af;
+}
+
+.dish-description {
+  flex: 1;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #9ca3af;
+  margin: 0 0 16px 0;
+}
+
+.read-more-btn {
+  background: none;
+  border: none;
+  color: #4ade80;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 8px;
+}
+
+.read-more-btn:hover {
+  text-decoration: underline;
+}
+
+.dish-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nutrition-btn {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1a3a1a;
+  border: 1px solid #2a4a2a;
+  border-radius: 12px;
+  color: #9ca3af;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.nutrition-btn:hover {
+  background: #2a4a2a;
+  color: #ffffff;
+}
+
+.add-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 14px 24px;
+  background: #a3e635;
+  border: none;
+  border-radius: 30px;
+  color: #0d1f0d;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.add-btn:hover {
+  background: #84cc16;
+}
+
+.add-btn.remove {
+  background: transparent;
+  border: 2px solid #ef4444;
+  color: #ef4444;
+}
+
+.add-btn.remove:hover {
+  background: rgba(239, 68, 68, 0.1);
+}
+
+.ingredient-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: #1a3a1a;
+  border: 1px solid #2a4a2a;
+  border-radius: 50%;
+  color: #6b7280;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.ingredient-btn:hover {
+  background: #2a4a2a;
+  color: #4ade80;
+  border-color: #4ade80;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .dish-card {
+    flex-direction: column;
+  }
+
+  .dish-image-container {
+    width: 100%;
+    height: 120px;
+    padding: 12px;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .dish-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+  }
+
+  .dish-content {
+    padding: 0 16px 16px 16px;
+  }
+
+  .dish-card-mobile-layout {
+    display: flex;
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .dish-card-mobile-layout .dish-image {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+  }
+
+  .selected-badge {
+    top: 8px;
+    right: 8px;
+    padding: 4px 10px;
+    font-size: 11px;
+  }
+
+  .dish-name {
+    font-size: 16px;
+  }
+
+  .dish-meta {
+    flex-direction: row;
+    gap: 16px;
+    margin-bottom: 12px;
+  }
+
+  .dish-price {
+    font-size: 16px;
+  }
+
+  .dish-calories {
+    font-size: 13px;
+  }
+
+  .dish-description {
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+
+  .dish-actions {
+    flex-direction: row;
+  }
+
+  .add-btn {
+    flex: 1;
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+
+  .ingredient-btn {
+    width: 40px;
+    height: 40px;
+  }
+}

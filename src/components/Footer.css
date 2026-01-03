@@ -1,0 +1,162 @@
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  background: linear-gradient(to top, #0d1f0d 80%, transparent);
+  z-index: 100;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.footer-icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1a3a1a;
+  border-radius: 12px;
+  color: #4ade80;
+}
+
+.footer-info {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.info-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.info-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #6b7280;
+  letter-spacing: 0.5px;
+}
+
+.info-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.info-divider {
+  width: 1px;
+  height: 40px;
+  background: #2a4a2a;
+}
+
+.continue-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 16px 32px;
+  background: #ffffff;
+  border: none;
+  border-radius: 12px;
+  color: #0d1f0d;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.continue-btn:hover {
+  background: #f0f0f0;
+  transform: translateY(-2px);
+}
+
+.continue-btn:active {
+  transform: translateY(0);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+    background: #0d1f0d;
+  }
+
+  .footer-left {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .footer-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .footer-info {
+    gap: 16px;
+  }
+
+  .info-value {
+    font-size: 16px;
+  }
+
+  .info-divider {
+    height: 32px;
+  }
+
+  .continue-btn {
+    width: 100%;
+    padding: 14px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .footer-left {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .footer-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .footer-info {
+    gap: 12px;
+    flex: 1;
+    justify-content: flex-end;
+  }
+
+  .info-label {
+    font-size: 10px;
+  }
+
+  .info-value {
+    font-size: 14px;
+  }
+
+  .info-divider {
+    height: 28px;
+  }
+
+  .continue-btn {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+}
